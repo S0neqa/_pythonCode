@@ -1,3 +1,3 @@
 nome = input("qual seu nome? ")
 
-print("olá ", nome, "seja bem vindo!!")
+print(f'olá \033[1m{nome}\033[m seja bem vindo!!')

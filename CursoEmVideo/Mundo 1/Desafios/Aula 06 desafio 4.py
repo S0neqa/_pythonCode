@@ -1,14 +1,20 @@
 dado = input('digite algo: ')
 alpha = dado.isalpha()
 alfaNum = dado.isalnum()
-print(f'A entrada {dado} tem segue algumas informações como:')
-print(f'O valor {dado} é do tipo {type(dado)}')
-print(f'Letra maiuscula: {dado.isupper()}')
-print(f'É do alfabeto: {dado.isalpha()}')
-print(f'É um número: {dado.isalnum()}')
-print(f'É da tabela ASCII: {dado.isascii()}')
-print(f'É um número decimal: {dado.isdecimal()}')
-print(f'É um digito: {dado.isdigit()}')
-print(f'É númerico: {dado.isnumeric()}')
-print(f'Ou se é um espaço: {dado.isspace()}')
 
+Cores = {
+    'limpar': '\033[m',
+    'verde': '\033[32;40m',
+    'azul': '\033[36;40m'}
+
+print(f'A entrada {Cores['azul']}{dado}{Cores['limpar']} tem segue algumas informações como:')
+print(f'O valor {Cores['azul']}{dado}{Cores['limpar']} é do tipo {Cores['verde']}{type(dado)}{Cores['limpar']}')
+
+print(f'Letra {Cores['azul']}maiuscula{Cores['limpar']}: {Cores['verde']}{dado.isupper()}{Cores['limpar']}')
+print(f'É do {Cores['azul']}alfabeto{Cores['limpar']}: {Cores['verde']}{dado.isalpha()}{Cores['limpar']}')
+print(f'É um {Cores['azul']}número{Cores['limpar']}: {Cores['verde']}{dado.isalnum()}{Cores['limpar']}')
+print(f'É da {Cores['azul']}tabela ASCII{Cores['limpar']}: {Cores['verde']}{dado.isascii()}{Cores['limpar']}')
+print(f'É um {Cores['azul']}número decimal{Cores['limpar']}: {Cores['verde']}{dado.isdecimal()}{Cores['limpar']}')
+print(f'É um {Cores['azul']}digito{Cores['limpar']}: {Cores['verde']}{dado.isdigit()}{Cores['limpar']}')
+print(f'É {Cores['azul']}númerico{Cores['limpar']}: {Cores['verde']}{dado.isnumeric()}{Cores['limpar']}')
+print(f'Ou se é um {Cores['azul']}espaço{Cores['limpar']}: {Cores['verde']}{dado.isspace()}{Cores['limpar']}')
