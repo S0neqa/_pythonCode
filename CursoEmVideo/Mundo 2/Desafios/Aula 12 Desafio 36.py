@@ -1,3 +1,4 @@
+from tkinter import *
 # comando da biblioteca para auxilio do tempo
 from time import sleep
 tax = 0.3
@@ -51,12 +52,28 @@ sleep(1.5)
 
 print("")
 
+# Teste com interface
+janela = Tk()
+janela.title("Resultado")
+janela.geometry("220x180")
+
+
 # condições para compra
 if installment < limit:
-
+    textoParaResultasdo = f"O seu financiamento esta liberado, parabéns pela compra do seu imvóvel"
+    
     print(f"O seu financiamento esta \033[1;32m liberado \033[0;30m, parabéns pela compra do seu imvóvel")
 
+    textoResultado = Label(janela, text = textoParaResultasdo)
+    textoResultado.grid(column=0, row=0, padx=10, pady=10)
+
 else:
-    print("Infelizmente o financiamento não foi liberado")
+
+    textoParaResultasdo = "Infelizmente o financiamento não foi liberado"
+    print(textoParaResultasdo)
+    textoResultado = Label(janela, text = textoParaResultasdo)
+    textoResultado.grid(column=0, row=0, padx=10, pady=10)
 
 print("")
+
+janela.mainloop()
