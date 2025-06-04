@@ -22,7 +22,7 @@ if age.isdigit:
     sleep(0.6)
     print(f"Analisando..\r", end = "")
     sleep(0.7)
-    print(f"Analisando...\r", end = "")
+    print(f"Analisando...")
     sleep(1)
 
     if age < youngerAge:
@@ -35,7 +35,7 @@ if age.isdigit:
         else:
             year = "anos"
         
-        message = f"ainda irá fazer o Alistamento Militar em {difference} {year}"
+        message = f"ainda irá fazer o Alistamento Militar em {difference} {year}!"
 
     elif age > youngerAge:
         
@@ -47,14 +47,14 @@ if age.isdigit:
         else:
             year = "anos"
         
-        message = f"Já fez o Alistamento Militar a {difference} {year}"
+        message = f"já fez o Alistamento Militar a {difference} {year}!"
 
     elif age == youngerAge:
        
         message = f"esta na época do Alistamento Militar, desejo boa sorte!"
 
-    print(f"Você {message}")
+    print(f"\nEntão {name}, você {message}\n")
 
 else:
     
-    print("Digite uma idade válida!")
+    print("\nDigite uma idade válida!")
